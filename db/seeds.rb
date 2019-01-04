@@ -8,7 +8,7 @@ Channel.create(channels)
 users = [
   {
     email: "myron@tsakirakis.me",
-    password: "myron"
+    password: "myroon"
   },
   {
     email: "jeroen@ja.gt",
@@ -16,7 +16,9 @@ users = [
   },
 ]
 
-myron, jeroen = User.create(users)
+User.create(users)
+myron = User.first
+jeroen = User.second
 
 def cm(user, channelname, content)
   Message.create(user: user, channel: Channel.find_by_name(channelname), content: content)

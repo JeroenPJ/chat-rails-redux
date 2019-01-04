@@ -1,0 +1,6 @@
+<!-- react mounting component -->
+<div id="chat_app" data-channels="<%= @channels.map(&:name).join(",") %>"></div>
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "chat" %>
+<% end %>
